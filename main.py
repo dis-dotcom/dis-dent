@@ -1,7 +1,7 @@
 from uuid import uuid4
 from fastapi import FastAPI, Body, status
 from fastapi.responses import JSONResponse, FileResponse
-from src.Order import Order
+from src.Order import Order, OrderService
 
 
 class Person:
@@ -17,9 +17,7 @@ people = [
     Person("Sam", 28)
 ]
 
-orders = [
-    Order()
-]
+orderService = OrderService()
  
 
 def find_person(id):
@@ -38,7 +36,7 @@ async def main():
 
 @app.get("/api/orders")
 async def get_orders():
-    return orders
+    return orderService.get_orders()
 
 
 @app.get("/api/users")
