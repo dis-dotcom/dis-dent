@@ -13,7 +13,6 @@ class Order:
 
 
 class OrderService:
-    @staticmethod
     def get_orders(self):
         return [
             Order(), Order(), Order()
