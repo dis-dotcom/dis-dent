@@ -2,35 +2,34 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>METANIT.COM</title>
+    <title>DisDent</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 <style>
-td {padding:5px;}
-button{margin: 5px;}
+    td { padding:5px; }
+    button { margin: 5px; }
 </style>
 </head>
-<body>
-    <h2>Список пользователей</h2>
+<body id="root">
+    <h2> Список заказов </h2>
     <div>
-        <input type="hidden" id="userId" />
         <p>
-            Имя:<br/>
-            <input id="userName" />
-        </p>
-        <p>
-            Возраст:<br />
-            <input id="userAge" type="number" />
-        </p>
-         <p>
-            <button id="saveBtn">Сохранить</button>
-            <button id="resetBtn">Сбросить</button>
+            Заказчик:<br/>
+            <input id="orderCustomerName" />
         </p>
     </div>
     <table>
-        <thead><tr><th>Имя</th><th>Возраст</th><th></th></tr></thead>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Заказчик</th>
+                <th>Создан</th>
+            </tr>
+        </thead>
         <tbody>
         </tbody>
     </table>
-  
+    <script src="app.jsx"></script>
     <script>
     // Получение всех пользователей
         async function getUsers() {
@@ -175,7 +174,7 @@ button{margin: 5px;}
         });
   
         // загрузка пользователей
-        getUsers();
+        // getUsers();
     </script>
 </body>
 </html>

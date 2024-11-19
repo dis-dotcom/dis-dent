@@ -10,3 +10,11 @@ class Order:
             created_at = datetime.now()
         self.id = id
         self.created_at = created_at
+
+
+class OrderService:
+    @staticmethod
+    def get_orders(self):
+        return [
+            Order(), Order(), Order()
+        ]
